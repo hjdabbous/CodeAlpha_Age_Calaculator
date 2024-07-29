@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Age Calculator</h1>
+        <label for="date">Select your birth date:</label>
+        <input type="text" id="date" name="date" required>
+        <div id="manualInputs" style="display: none;">
+            <label for="day">Day:</label>
+            <input type="number" id="manualDay" name="manualDay" min="1" max="31">
+            <label for="month">Month:</label>
+            <input type="number" id="manualMonth" name="manualMonth" min="1" max="12">
+            <label for="year">Year:</label>
+            <input type="number" id="manualYear" name="manualYear" min="1900" max="2100">
+        </div>
+        <button type="button" id="toggleInputMode">Switch to Manual Input</button>
+        <input type="hidden" id="day" name="day">
+        <input type="hidden" id="month" name="month">
+        <input type="hidden" id="year" name="year">
+        <button type="button" onclick="calculateAge()">Calculate Age</button>
+        <p id="error"></p>
+        <p id="result"></p>
+        <p id="detailedResult"></p> <!-- Added for detailed result -->
+    </div>
+    <div class="theme-switcher">
+        <span class="icon sun">&#9728;</span>
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider"></span>
+        </label>
+        <span class="icon moon">&#9790;</span>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- Created by HJD -->
